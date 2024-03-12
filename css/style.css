@@ -1,0 +1,13 @@
+body{
+   background-image: url(../pexels-veeterzy-39811.jpg);
+   
+   background-attachment: fixed;
+    background-size: cover;
+}
+
+.card-body{
+    padding: 15%;
+}
+input{
+    text-align: center;
+}

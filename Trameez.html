@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./male_and_female_22010.ico">
+    <title>Measuring weights</title>
+</head>
+
+<style>
+   
+</style>
+<body>
+   
+    <div class="container ">
+       
+        <div class="card" style="background-color: gray; margin-top:150px;">
+            <div class="card-body ">
+                <form action="#" class=" ">
+                    <div class="form-groub  text-center">
+                    <input class="form-control" type="number" id="width-input" placeholder="Width">
+                  </div>
+                    <br>
+                    <div class="form-groub  text-center">
+                    <input class="form-control" type="number" id="height-input" placeholder="Height">
+                    </div>
+                    <br>
+                    <div class="text-center">
+                    <button class="btn btn-danger ms-auto" id="button-chiek"> Check your weight </button>
+                </div>
+                </form>
+                <div class="text-center" style="margin-top:30px;">
+                    <div id="bmi" style="font-size: 20px;"></div>
+                    <div id="bmi-catogray" style="font-weight: bold;"></div>
+                </div>
+            </div>
+          
+        </div>
+
+    </div>
+
+    <script>
+        window.alert("رمضان كريم : ممكن فحص وزنك السيدة معزة...؟")
+        document.getElementById("button-chiek").addEventListener("click", function(){
+          
+          let w=  document.getElementById("width-input").value
+          let h= document.getElementById("height-input").value
+
+          let Bmi=w/(h*h)
+          document.getElementById("bmi").innerHTML= Bmi
+            
+          
+          if(Bmi <18){
+            document.getElementById("bmi-catogray").innerHTML="ضغيف"   
+          }else if(Bmi <24.9){
+            document.getElementById("bmi-catogray").innerHTML="وزن مثالي"
+          }else if(Bmi <29.9){
+            document.getElementById("bmi-catogray").innerHTML="وزن زايد"
+          }else if(Bmi <34.9){
+            document.getElementById("bmi-catogray").innerHTML="سمنة اولي"
+          }else if(Bmi <39.9){
+            document.getElementById("bmi-catogray").innerHTML="سمنة درجة ثانية"
+          }else {
+            document.getElementById("bmi-catogray").innerHTML="سمنة خطيرة"
+          }
+          
+        })
+
+   
+    //    document.getElementById("btn-t").addEventListener("click", function(){
+    //     // console.log("click")
+    //     var my=document.getElementById("inputo").value
+    //     document.getElementById("text-speca").innerHTML=`${my}`
+
+
+       
+       
+
+    //    })
+    //    var degree=70
+
+    //    switch(true){
+    //     case (degree >=90):console.log("A")
+    //     break
+    //     case (degree <=79 && degree >=70):console.log("B")
+    //     break
+    //     case (degree <=69 && degree <=60):console.log("C")
+    //     break 
+    //     default:console.log("erro")
+    //    }
+
+    //    var age=78;
+    //    switch(true){
+    //     case (age>=70&& age<=100):console.log("this old man")
+    //     break
+    //     case (age >=30&& age <=50):console.log("this min")
+    //     break
+    //      default: console.log("young")
+    //    }
+    //    var age=60;
+
+    //    switch(true){
+    //     case (age >=50): console.log("old men") 
+    //     break
+    //     case (age >=30) : console.log("mid men")
+    //     break
+    //     default :console.log("young")
+
+    //    }
+
+
+     
+    //    var age=39
+       
+    //    if(age >=50){
+    //     console.log("this is old man :"+  age)
+    //    }else if(age >=40 && age <=50){ 
+    //     console.log("this age mid")
+    //    }
+    
+    //    else{
+    //     console.log("this is younyboy :"+ age)
+    //    }
+       
+    </script>
+</body>
+</html>
